@@ -4,14 +4,17 @@ ifeq ($(MINI_GAPPS),true)
  # install
 PRODUCT_COPY_FILES += \
 	vendor/google/armv6/app/GoogleBackupTransport.apk:system/app/GoogleBackupTransport.apk \
+	vendor/google/armv6/app/ConfigUpdater.apk:system/app/ConfigUpdater.apk \
 	vendor/google/armv6/app/GoogleCalendarSyncAdapter.apk:system/app/GoogleCalendarSyncAdapter.apk \
 	vendor/google/armv6/app/GoogleContactsSyncAdapter.apk:system/app/GoogleContactsSyncAdapter.apk \
 	vendor/google/armv6/app/GoogleLoginService.apk:system/app/GoogleLoginService.apk \
 	vendor/google/armv6/app/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
-	vendor/google/armv6/app/PlayStore.apk:system/app/PlayStore.apk \
+	vendor/google/armv6/app/GoogleOneTimeInitializer.apk:system/app/GoogleOneTimeInitializer.apk \
+	vendor/google/armv6/app/GooglePartnerSetup.apk:system/app/GooglePartnerSetup.apk \
+	vendor/google/armv6/app/MediaUploader.apk:system/app/MediaUploader.apk \
+	vendor/google/armv6/app/Phonesky.apk:system/app/Phonesky.apk \
 	vendor/google/armv6/app/SetupWizard.apk:system/app/SetupWizard.apk \
 	vendor/google/armv6/app/NetworkLocation.apk:system/app/NetworkLocation.apk \
-	vendor/google/armv6/app/Talk.apk:system/app/Talk.apk \
 	vendor/google/armv6/app/ChromeBookmarksSyncAdapter.apk:system/app/ChromeBookmarksSyncAdapter.apk
 
 PRODUCT_COPY_FILES += \
@@ -24,14 +27,17 @@ PRODUCT_COPY_FILES += \
 else
 # uninstall
 $(shell rm -f $(OUT)/system/app/GoogleBackupTransport.apk)
+$(shell rm -f $(OUT)/system/app/ConfigUpdater.apk)
 $(shell rm -f $(OUT)/system/app/GoogleCalendarSyncAdapter.apk)
 $(shell rm -f $(OUT)/system/app/GoogleContactsSyncAdapter.apk)
 $(shell rm -f $(OUT)/system/app/GoogleLoginService.apk)
 $(shell rm -f $(OUT)/system/app/GoogleServicesFramework.apk)
-$(shell rm -f $(OUT)/system/app/PlayStore.apk)
+$(shell rm -f $(OUT)/system/app/GoogleOneTimeInitializer.apk)
+$(shell rm -f $(OUT)/system/app/GooglePartnerSetup.apk)
+$(shell rm -f $(OUT)/system/app/MediaUploader.apk)
+$(shell rm -f $(OUT)/system/app/Phonesky.apk)
 $(shell rm -f $(OUT)/system/app/SetupWizard.apk)
 $(shell rm -f $(OUT)/system/app/NetworkLocation.apk)
-$(shell rm -f $(OUT)/system/app/Talk.apk)
 $(shell rm -f $(OUT)/system/app/ChromeBookmarksSyncAdapter.apk)
 
 $(shell rm -f $(OUT)/system/etc/permissions/com.google.android.maps.xml)
